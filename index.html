@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Shreyuuu! ♡</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#FFFDFB] text-[#2D3748] font-sans antialiased overflow-x-hidden selection:bg-[#F8D9E5] selection:text-[#2D3748]">
+
+    <!-- Custom Cursor Canvas / Dot -->
+    <div id="custom-cursor" class="fixed w-4 h-4 rounded-full bg-[#F8D9E5] border border-white pointer-events-none z-50 transition-transform duration-75 ease-out shadow-sm opacity-0 md:opacity-80"></div>
+
+    <!-- Floating Background Decor Elements -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div class="floating-item absolute top-[10%] left-[5%] text-2xl text-[#C9E5F6] opacity-60">✨</div>
+        <div class="floating-item absolute top-[25%] right-[8%] text-3xl text-[#F8D9E5] opacity-70" style="animation-delay: 1s;">🌸</div>
+        <div class="floating-item absolute top-[50%] left-[3%] text-xl text-[#FFF0B8] opacity-80" style="animation-delay: 2s;">⭐</div>
+        <div class="floating-item absolute top-[70%] right-[4%] text-2xl text-[#F8D9E5] opacity-60" style="animation-delay: 1.5s;">🤍</div>
+        <div class="floating-item absolute top-[85%] left-[7%] text-3xl text-[#C9E5F6] opacity-70" style="animation-delay: 2.5s;">🌼</div>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 py-8">
+
+        <!-- 1. HERO SECTION -->
+        <section class="min-h-[90vh] flex flex-col justify-center items-center text-center relative rounded-3xl p-8 sm:p-12 bg-gradient-to-br from-[#C9E5F6]/40 via-[#FFF0B8]/30 to-[#F8D9E5]/40 border border-white/60 shadow-xl shadow-pink-100/30 overflow-hidden">
+            <!-- Decorative Subtle Sparkles -->
+            <div class="absolute top-6 left-6 text-xl">☁️</div>
+            <div class="absolute bottom-6 right-6 text-xl">🌷</div>
+
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 border border-pink-100 shadow-sm text-xs font-semibold tracking-wider text-pink-400 uppercase mb-6 animate-pulse">
+                <span>🎂</span>
+                <span>21 November</span>
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[#2D3748] mb-6 leading-tight">
+                Happy Birthday,<br/>
+                <span class="bg-gradient-to-r from-pink-400 via-purple-300 to-sky-400 bg-clip-text text-transparent">Shreyuuu! ♡</span>
+            </h1>
+
+            <p class="max-w-xl text-base sm:text-lg text-gray-600 font-light leading-relaxed mb-10">
+                A little corner of the internet, made to celebrate you, your dreams, and all the memories still waiting to happen.
+            </p>
+
+            <a href="#countdown" class="group relative inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white border border-pink-200 text-gray-700 font-medium shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                <span>Open your little surprise</span>
+                <i class="fa-solid font-bold fa-arrow-down text-xs group-hover:translate-y-1 transition-transform"></i>
+            </a>
+        </section>
+
+        <!-- 2. COUNTDOWN SECTION -->
+        <section id="countdown" class="scroll-mt-12 text-center">
+            <h2 class="font-serif text-2xl sm:text-3xl font-semibold mb-3">Counting Down To Your Next Chapter</h2>
+            <p class="text-xs sm:text-sm text-gray-500 mb-8">Every second closer to November 21st ✨</p>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
+                <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-[#C9E5F6] shadow-sm hover:shadow-md transition-shadow">
+                    <span id="cd-days" class="block font-serif text-3xl sm:text-4xl font-bold text-sky-500">00</span>
+                    <span class="text-xs uppercase tracking-wider text-gray-400 mt-1 block">Days</span>
+                </div>
+                <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-[#FFF0B8] shadow-sm hover:shadow-md transition-shadow">
+                    <span id="cd-hours" class="block font-serif text-3xl sm:text-4xl font-bold text-amber-500">00</span>
+                    <span class="text-xs uppercase tracking-wider text-gray-400 mt-1 block">Hours</span>
+                </div>
+                <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-[#F8D9E5] shadow-sm hover:shadow-md transition-shadow">
+                    <span id="cd-minutes" class="block font-serif text-3xl sm:text-4xl font-bold text-pink-400">00</span>
+                    <span class="text-xs uppercase tracking-wider text-gray-400 mt-1 block">Minutes</span>
+                </div>
+                <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-sky-100 shadow-sm hover:shadow-md transition-shadow">
+                    <span id="cd-seconds" class="block font-serif text-3xl sm:text-4xl font-bold text-indigo-400">00</span>
+                    <span class="text-xs uppercase tracking-wider text-gray-400 mt-1 block">Seconds</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. BIRTHDAY LETTER SECTION -->
+        <section class="max-w-2xl mx-auto relative">
+            <div class="absolute -top-4 -left-4 text-3xl opacity-80">🌸</div>
+            <div class="absolute -bottom-4 -right-4 text-3xl opacity-80">🎀</div>
+            
+            <div class="bg-[#FFFDFB] p-8 sm:p-12 rounded-3xl border border-pink-100 shadow-xl shadow-pink-50 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-[#FFF0B8]/40 to-transparent rounded-bl-full pointer-events-none"></div>
+                
+                <h3 class="font-serif text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                    <span>Dear Shreyuuu,</span>
+                </h3>
+
+                <div class="space-y-4 text-gray-700 leading-relaxed font-serif text-base sm:text-lg">
+                    <p>Happy birthday! I hope this new chapter brings you endless reasons to smile, exciting little adventures, peaceful days, and the courage to chase every dream you have.</p>
+                    <p>Keep being curious, keep exploring, and never stop collecting beautiful memories. May life take you to places you've only imagined and give you stories you'll tell for years.</p>
+                    <p>Here's to more laughter, more fun, and a year that feels wonderfully yours. ♡</p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-pink-100/60 flex justify-end">
+                    <span class="font-handwriting text-2xl text-pink-500 font-bold">With warmth & smiles ✨</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PHOTO GALLERY SECTION -->
+        <section class="space-y-8">
+            <div class="text-center">
+                <h2 class="font-serif text-3xl font-bold mb-2">Little Moments</h2>
+                <p class="text-xs sm:text-sm text-gray-500">Polaroids taped with soft memories</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Polaroid 1 -->
+                <div class="bg-white p-4 rounded-xl shadow-md border border-gray-100 hover:rotate-1 transition-transform duration-300 flex flex-col items-center">
+                    <div class="w-full aspect-[4/5] overflow-hidden rounded-lg bg-pink-50 mb-4 relative group">
+                        <img id="img-0" src="876197996_1520554486546935_4717616978466137037_n.jpg" alt="Shreyuuu Portrait" class="w-full h-full object-cover">
+                    </div>
+                    <span class="font-handwriting text-xl text-gray-700 mb-3">Pretty Smiles ✨</span>
+                    <button onclick="triggerFileSelect(0)" class="w-full py-1.5 px-3 rounded-lg bg-[#C9E5F6]/40 text-xs font-medium text-gray-600 hover:bg-[#C9E5F6] transition-colors">Replace Photo</button>
+                    <input type="file" id="input-0" class="hidden" accept="image/*" onchange="loadPhoto(event, 0)">
+                </div>
+
+                <!-- Polaroid 2 -->
+                <div class="bg-white p-4 rounded-xl shadow-md border border-gray-100 hover:-rotate-1 transition-transform duration-300 flex flex-col items-center">
+                    <div class="w-full aspect-[4/5] overflow-hidden rounded-lg bg-pink-50 mb-4 relative group">
+                        <img id="img-1" src="886079756_2902982260086333_269881517211496069_n.jpg" alt="Field Flowers" class="w-full h-full object-cover">
+                    </div>
+                    <span class="font-handwriting text-xl text-gray-700 mb-3">Field Flowers 🌸</span>
+                    <button onclick="triggerFileSelect(1)" class="w-full py-1.5 px-3 rounded-lg bg-[#FFF0B8]/50 text-xs font-medium text-gray-600 hover:bg-[#FFF0B8] transition-colors">Replace Photo</button>
+                    <input type="file" id="input-1" class="hidden" accept="image/*" onchange="loadPhoto(event, 1)">
+                </div>
+
+                <!-- Polaroid 3 -->
+                <div class="bg-white p-4 rounded-xl shadow-md border border-gray-100 hover:rotate-1 transition-transform duration-300 flex flex-col items-center">
+                    <div class="w-full aspect-[4/5] overflow-hidden rounded-lg bg-pink-50 mb-4 relative group">
+                        <img id="img-2" src="881387870_1013771251011529_7482297423861361338_n.jpg" alt="Fun Vibes" class="w-full h-full object-cover">
+                    </div>
+                    <span class="font-handwriting text-xl text-gray-700 mb-3">Fun Vibes 🕶️</span>
+                    <button onclick="triggerFileSelect(2)" class="w-full py-1.5 px-3 rounded-lg bg-[#F8D9E5]/40 text-xs font-medium text-gray-600 hover:bg-[#F8D9E5] transition-colors">Replace Photo</button>
+                    <input type="file" id="input-2" class="hidden" accept="image/*" onchange="loadPhoto(event, 2)">
+                </div>
+
+                <!-- Polaroid 4: Empty Magic Moment Slot -->
+                <div class="bg-white p-4 rounded-xl shadow-md border border-gray-100 hover:-rotate-1 transition-transform duration-300 flex flex-col items-center">
+                    <div id="wrapper-3" class="w-full aspect-[4/5] rounded-lg bg-pink-50/50 border-2 border-dashed border-pink-200 mb-4 flex flex-col items-center justify-center p-4 text-center cursor-pointer hover:bg-pink-50 transition-colors" onclick="triggerFileSelect(3)">
+                        <img id="img-3" src="" alt="Magic Moment" class="hidden w-full h-full object-cover rounded-lg">
+                        <div id="placeholder-3" class="flex flex-col items-center gap-2">
+                            <span class="text-3xl">✨</span>
+                            <span class="text-xs text-gray-400 font-medium">Click to add your photo</span>
+                        </div>
+                    </div>
+                    <span class="font-handwriting text-xl text-gray-700 mb-3">Magic Moment ☁️</span>
+                    <button onclick="triggerFileSelect(3)" class="w-full py-1.5 px-3 rounded-lg bg-gray-100 text-xs font-medium text-gray-600 hover:bg-gray-200 transition-colors">Add Photo</button>
+                    <input type="file" id="input-3" class="hidden" accept="image/*" onchange="loadPhoto(event, 3)">
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. ARUNACHAL PRADESH POSTCARD SECTION -->
+        <section class="max-w-3xl mx-auto">
+            <div class="bg-gradient-to-r from-[#C9E5F6]/40 via-white to-[#FFF0B8]/40 p-6 sm:p-10 rounded-3xl border border-sky-100 shadow-lg relative overflow-hidden">
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="w-full md:w-1/2 rounded-2xl overflow-hidden border-4 border-white shadow-md relative">
+                        <img src="099c617c86e235714e782b7b49206b93.jpg" alt="Arunachal Mountains" class="w-full h-56 object-cover">
+                        <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded text-[10px] font-bold tracking-widest uppercase border border-amber-200 text-amber-700">
+                            Postcard
+                        </div>
+                    </div>
+
+                    <div class="w-full md:w-1/2 space-y-4">
+                        <span class="text-xs uppercase tracking-widest text-sky-500 font-bold block">Dream Destination</span>
+                        <h3 class="font-serif text-2xl font-bold text-gray-800">Postcard from the Future 🏔️</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed font-light">
+                            Winding mountain roads, fresh misty air, peaceful pine valleys, and endless views. Here’s to future road trips, starry mountain nights, and adventures waiting for you in Arunachal Pradesh.
+                        </p>
+                        <div class="pt-2">
+                            <span class="font-handwriting text-lg text-pink-500">"Dear future self: we made it here. ♡"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. MUSIC PLAYER SECTION -->
+        <section class="max-w-md mx-auto">
+            <div class="bg-white/90 backdrop-blur-md p-6 rounded-3xl border border-pink-100 shadow-xl space-y-4">
+                <div class="flex items-center gap-4">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-[#F8D9E5] to-[#C9E5F6] flex items-center justify-center shadow-inner">
+                        <i id="music-disc" class="fa-solid fa-compact-disc text-2xl text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-gray-800 text-lg">One Love</h4>
+                        <p id="audio-status" class="text-xs text-gray-400">Ready to play 🎵</p>
+                    </div>
+                </div>
+
+                <!-- Hidden HTML5 Audio Element -->
+                <audio id="bg-audio" src="one-love-official-audio.mp3" preload="metadata"></audio>
+
+                <!-- Controls & Progress -->
+                <div class="space-y-2 pt-2">
+                    <div class="flex items-center justify-between text-xs text-gray-400 font-mono">
+                        <span id="curr-time">0:00</span>
+                        <span id="total-time">0:00</span>
+                    </div>
+                    <input type="range" id="seek-bar" value="0" min="0" max="100" class="w-full accent-pink-400 cursor-pointer h-1.5 bg-gray-100 rounded-lg">
+                </div>
+
+                <div class="flex items-center justify-between pt-2">
+                    <button id="play-btn" onclick="togglePlay()" class="w-12 h-12 rounded-full bg-pink-400 text-white flex items-center justify-center shadow-md hover:bg-pink-500 transition-colors">
+                        <i id="play-icon" class="fa-solid fa-play ml-0.5"></i>
+                    </button>
+                    
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-volume-high text-xs text-gray-400"></i>
+                        <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="0.8" class="w-20 accent-pink-400 h-1 bg-gray-100 rounded-lg" onchange="adjustVolume(this.value)">
+                    </div>
+                </div>
+
+                <div class="text-center pt-2">
+                    <label for="audio-upload" class="text-[11px] text-gray-400 hover:text-pink-400 cursor-pointer underline transition-colors">
+                        Change song file
+                    </label>
+                    <input type="file" id="audio-upload" class="hidden" accept="audio/*" onchange="loadAudio(event)">
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CONFETTI MAGIC BUTTON -->
+        <section class="text-center py-4">
+            <button onclick="triggerConfetti()" class="group relative inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-[#F8D9E5] via-[#FFF0B8] to-[#C9E5F6] text-gray-700 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                <span>Make a little birthday magic ✨</span>
+            </button>
+        </section>
+
+        <!-- FOOTER & BACK TO TOP -->
+        <footer class="text-center pt-12 pb-6 border-t border-gray-100 flex flex-col items-center gap-4">
+            <p class="text-xs text-gray-400 font-light">Made with ♥ and pastel wishes · for Shreyuuu</p>
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="w-8 h-8 rounded-full bg-gray-50 border border-gray-200 text-gray-400 text-xs flex items-center justify-center hover:bg-pink-50 hover:text-pink-400 transition-colors">
+                ↑
+            </button>
+        </footer>
+
+    </div>
+
+    <!-- Canvas overlay for confetti -->
+    <canvas id="confetti-canvas" class="fixed inset-0 pointer-events-none z-50"></canvas>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
